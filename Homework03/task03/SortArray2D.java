@@ -41,7 +41,8 @@ public class SortArray2D {
 		}
 		bubbleSort(average);
 		System.out.println(Arrays.toString(average));
-		System.out.println("The Array with the biggest average value is: ");
+		
+		System.out.print("Array with highest average of " + average[average.length - 1]);
 
 	}
 	public static int sortRowWise(int m[][]) {					// for cikls priekš masīvu rindām

@@ -7,16 +7,16 @@ public class PrimeGenerator {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Lūdzu ievadiet cik daudz pirmskaitļus jūs vēlaties uzģenerēt(0-100): ");
-		int pirmskaitli = sc.nextInt();
-		while (pirmskaitli < 0 || pirmskaitli > 100) {
-			System.out.print("Jūsu ievadītais skaitlis nav pareizs, mēģiniet vēlreiz:");
-			pirmskaitli = sc.nextInt();
+		System.out.print("Please enter how many prime numbers you wish to generate(0-100): ");
+		int primenumbers = sc.nextInt();
+		while (primenumbers < 0 || primenumbers > 100) {
+			System.out.print("The number you entered is incorrect, try again: ");
+			primenumbers = sc.nextInt();
 		}
 		sc.close();
 		int[] x = { 1 };
 		int status = 1;
-		for (int count = 2; count <= pirmskaitli + 1;) {
+		for (int count = 2; count <= primenumbers + 1;) {
 			for (int j = 2; j <= Math.sqrt(x[0]); j++) {										
 				if (x[0] % j == 0) {
 					status = 0;
