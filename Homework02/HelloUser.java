@@ -5,20 +5,20 @@ public class HelloUser {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String input;
-		System.out.print("Please enter your name and your last name with space: ");
+		System.out.print("Lūdzu ievadiet Vārdu un Uzvārdu ar atstarpi: ");
 		input = sc.nextLine();
 		sc.close();
 		
-		int space;
-		space = input.indexOf(' ');
-		String name;
-		name = input.substring(0, space);
-		String lastname;
-		lastname = input.substring(space + 1);
+		int atstarpe;
+		atstarpe = input.indexOf(' ');
+		String vards;
+		vards = input.substring(0, atstarpe);
+		String uzvards;
+		uzvards = input.substring(atstarpe + 1);
 		
-		name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-		System.out.println("'" + name + "'");
-		System.out.println("'" + lastname.toUpperCase() + "'");
+		vards = vards.substring(0, 1).toUpperCase() + vards.substring(1).toLowerCase();
+		System.out.println("'" + vards + "'");
+		System.out.println("'" + uzvards.toUpperCase() + "'");
 	}
 
 }
